@@ -1,7 +1,9 @@
 # TimesApp
 
 ## How I approached modularising the app ?
-i have three types of module
+Separating core logic can help to create a clear separation of concerns that makes our code easier to understand so ,
+
+i modularised the app to three types of module
 
 1. “data” module.
 
