@@ -1,7 +1,7 @@
 package com.mahmoud.mohammed.timesapp.common;
 
 
-public interface Constants {
+public interface AppConfig {
 
     String URL = "http://api.nytimes.com/svc/mostpopular/";
 
