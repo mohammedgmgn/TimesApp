@@ -1,4 +1,4 @@
-package com.mahmoud.mohammed.data;
+package com.mahmoud.mohammed.data.models;
 
 import com.google.gson.annotations.SerializedName;
 
@@ -7,7 +7,7 @@ import java.util.List;
 public class ArticlesResponse {
 
     @SerializedName("num_results")
-    public int numResults;
+     int numResults;
     @SerializedName("status")
     public String status;
     @SerializedName("copyright")

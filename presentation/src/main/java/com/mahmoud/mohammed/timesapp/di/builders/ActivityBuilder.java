@@ -1,0 +1,18 @@
+package com.mahmoud.mohammed.timesapp.di.builders;
+
+
+import com.mahmoud.mohammed.timesapp.di.scopes.PerActivity;
+import com.mahmoud.mohammed.timesapp.ui.TimesActivity;
+import dagger.Module;
+import dagger.android.ContributesAndroidInjector;
+
+@Module
+public interface ActivityBuilder {
+
+    @PerActivity
+    @ContributesAndroidInjector(modules = {FragmentBuilder.class})
+    TimesActivity getTimesActivity();
+}
+
+
+

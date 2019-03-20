@@ -1,11 +1,14 @@
 package com.mahmoud.mohammed.timesapp.base;
 
+import android.content.Intent;
 import android.support.v4.app.Fragment;
 
-import com.mahmoud.mohammed.data.Article;
+import com.mahmoud.mohammed.data.models.Article;
+import com.mahmoud.mohammed.timesapp.ui.DetailActivity;
 
 public class BaseFragment extends Fragment {
- protected   void navigateToDetailsScreen(Article article){
- }
+    protected void navigateToDetailsScreen(Article article) {
+        startActivity(new Intent(getContext(), DetailActivity.class));
+    }
 }
 

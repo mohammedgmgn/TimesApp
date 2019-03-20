@@ -5,7 +5,7 @@ import android.os.Bundle;
 
 import com.mahmoud.mohammed.timesapp.R;
 
-public class MainActivity extends AppCompatActivity {
+public class TimesActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

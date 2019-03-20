@@ -1,4 +1,4 @@
-package com.mahmoud.mohammed.data;
+package com.mahmoud.mohammed.data.models;
 
 import android.os.Parcel;
 import android.os.Parcelable;

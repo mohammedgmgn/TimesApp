@@ -5,7 +5,6 @@ import android.app.Application;
 import android.support.v4.app.Fragment;
 
 
-import com.mahmoud.mohammed.timesapp.common.Constants;
 
 import javax.inject.Inject;
 
@@ -26,13 +25,10 @@ public class TimesApplication extends Application implements HasActivityInjector
     @Override
     public void onCreate() {
         super.onCreate();
-
         DaggerAppComponent.builder()
                 .application(this)
-                .url(Constants.URL)
                 .build()
                 .inject(this);
-
     }
 
 
