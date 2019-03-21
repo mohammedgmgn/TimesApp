@@ -20,6 +20,7 @@ import java.util.List;
 
 import javax.inject.Inject;
 
+import butterknife.BindView;
 import butterknife.ButterKnife;
 import dagger.android.support.AndroidSupportInjection;
 
@@ -31,6 +32,7 @@ public class TimesFragment extends BaseFragment implements ItemClickListener<Art
     ViewModelFactory viewModelFactory;
     @Inject
     ArticlesAdapter adapter;
+    @BindView(R.id.articles_recycler)
 
     RecyclerView articlesRecyclerView;
 

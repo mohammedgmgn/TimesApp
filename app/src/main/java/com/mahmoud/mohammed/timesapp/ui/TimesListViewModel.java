@@ -13,12 +13,13 @@ import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.schedulers.Schedulers;
 
 public class TimesListViewModel extends BaseViewModel {
-     TimesUseCase timesUseCase;
-     Application application;
+    TimesUseCase timesUseCase;
+    Application application;
 
     private final MutableLiveData<Response> response = new MutableLiveData<>();
 
     public TimesListViewModel(Application application, TimesUseCase timesUseCase) {
+        super(application);
         this.timesUseCase = timesUseCase;
         this.application = application;
 

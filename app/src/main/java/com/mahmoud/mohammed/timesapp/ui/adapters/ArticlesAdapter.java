@@ -5,11 +5,11 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.mahmoud.mohammed.timesapp.R;
 import com.mahmoud.mohammed.timesapp.data.models.Article;
+import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -18,8 +18,11 @@ import javax.inject.Inject;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import de.hdodenhof.circleimageview.CircleImageView;
 
 public class ArticlesAdapter extends RecyclerView.Adapter<ArticlesAdapter.ArticlesViewHolder> {
+    @Inject
+    Picasso picasso;
 
     private List<Article> articles = new ArrayList<>();
     private ItemClickListener<Article> itemClickListener;
@@ -42,7 +45,7 @@ public class ArticlesAdapter extends RecyclerView.Adapter<ArticlesAdapter.Articl
         holder.tvCreatedBy.setText(article.getByline());
         holder.tvSource.setText(article.getSource());
         holder.tvDate.setText(article.getPublishedDate());
-       // holder.image.setImageURI(article.getMedia().get(0).getMediaMetadata().get(2).getUrl());
+        picasso.load(article.getMedia().get(0).getMediaMetadata().get(2).getUrl()).into(holder.image);
     }
 
     public void setArticles(List<Article> articles) {
@@ -63,7 +66,7 @@ public class ArticlesAdapter extends RecyclerView.Adapter<ArticlesAdapter.Articl
         @BindView(R.id.title)
         public TextView tvTitle;
         @BindView(R.id.image)
-        public ImageView image;
+        public CircleImageView image;
 
         @BindView(R.id.created_by)
         public TextView tvCreatedBy;
