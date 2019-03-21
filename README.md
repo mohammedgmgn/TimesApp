@@ -3,8 +3,16 @@
 
 
 <p align="center">
-<img src="clean.png" width="200"/>
+<img src="Clean.png" width="200"/>
 </p>
+
+
+
+
+
+
+
+
 
 ## How I approached modularising the app ?
 Separating core logic can help to create a clear separation of concerns that makes our code easier to understand so ,
