@@ -2,11 +2,6 @@
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/a0b69cd973d24889a4194b0a47837692)](https://www.codacy.com?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=mohammedgmgn/TimesApp&amp;utm_campaign=Badge_Grade)
 
 
-Features:
-Displaying list of items with its details
-Loading More feature
-Cacheing response.
-swipe to delete item
 
 
 ## How I approached modularising the app ?
