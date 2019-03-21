@@ -5,6 +5,7 @@ import com.mahmoud.mohammed.timesapp.data.TimesRepository;
 import com.mahmoud.mohammed.timesapp.data.models.ArticlesResponse;
 
 import io.reactivex.Observable;
+import io.reactivex.Single;
 
 public class TimesUseCase {
     private TimesRepository timesRepository;
@@ -13,7 +14,7 @@ public class TimesUseCase {
         this.timesRepository = timesRepository;
     }
 
-    public Observable<ArticlesResponse> getArticleTimes() {
+    public Single<ArticlesResponse> getArticleTimes() {
         return timesRepository.getTimes();
     }
 }

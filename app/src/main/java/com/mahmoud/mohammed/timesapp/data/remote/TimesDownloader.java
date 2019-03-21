@@ -7,6 +7,7 @@ import com.mahmoud.mohammed.timesapp.data.models.ArticlesResponse;
 import javax.inject.Inject;
 
 import io.reactivex.Observable;
+import io.reactivex.Single;
 
 public class TimesDownloader implements TimesRepository {
     TimesApi timesApi;
@@ -17,7 +18,7 @@ public class TimesDownloader implements TimesRepository {
     }
 
     @Override
-    public Observable<ArticlesResponse> getTimes() {
+    public Single<ArticlesResponse> getTimes() {
         return timesApi.getArticles(BuildConfig.API_KEY);
     }
 }
