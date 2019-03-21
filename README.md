@@ -20,3 +20,6 @@ i modularised the app to three types of module
 3. “Domain” module
 
 
+## Technical Notes:
+1. Cacheing .
+7. Follow most of `Google Design Guidelines`.
