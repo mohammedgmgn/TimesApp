@@ -7,7 +7,7 @@ import android.support.annotation.NonNull;
 
 
 import com.mahmoud.mohammed.domain.TimesUseCase;
-import com.mahmoud.mohammed.timesapp.ui.TimesListViewModel;
+import com.mahmoud.mohammed.timesapp.ui.TimesViewModel;
 
 import javax.inject.Inject;
 import javax.inject.Named;
@@ -37,6 +37,6 @@ public class ViewModelFactory extends ViewModelProvider.NewInstanceFactory {
     @NonNull
     @Override
     public <T extends ViewModel> T create(@NonNull Class<T> modelClass) {
-        return (T) new TimesListViewModel(application,timesUseCase,subscribeOnScheduler,observeOnScheduler);
+        return (T) new TimesViewModel(application,timesUseCase,subscribeOnScheduler,observeOnScheduler);
     }
 }

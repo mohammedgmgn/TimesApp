@@ -1,10 +1,10 @@
 package com.mahmoud.mohammed.timesapp.di;
 
 
-import android.net.Network;
-
 import com.mahmoud.mohammed.timesapp.TimesApplication;
 import com.mahmoud.mohammed.timesapp.di.builders.ActivityBuilder;
+import com.mahmoud.mohammed.timesapp.di.commonmodules.AppModule;
+import com.mahmoud.mohammed.timesapp.di.commonmodules.NetworkModule;
 
 import javax.inject.Singleton;
 
