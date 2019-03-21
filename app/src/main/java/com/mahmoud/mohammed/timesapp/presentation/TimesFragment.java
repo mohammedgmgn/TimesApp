@@ -77,7 +77,7 @@ public class TimesFragment extends BaseFragment implements ItemClickListener<Art
                 renderDataState(response.data.articles);
                 break;
 
-            case ERROR:
+            default:
                 renderErrorState(response.error);
                 break;
         }
