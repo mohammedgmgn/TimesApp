@@ -2,10 +2,12 @@ package com.mahmoud.mohammed.timesapp.di;
 
 
 import android.app.Application;
-import android.net.Network;
 
 import com.mahmoud.mohammed.timesapp.TimesApplication;
 import com.mahmoud.mohammed.timesapp.di.builders.ActivityBuilder;
+import com.mahmoud.mohammed.timesapp.di.commonmodules.AppModule;
+import com.mahmoud.mohammed.timesapp.di.commonmodules.NetworkModule;
+import com.mahmoud.mohammed.timesapp.di.commonmodules.PicassoModule;
 
 import javax.inject.Singleton;
 

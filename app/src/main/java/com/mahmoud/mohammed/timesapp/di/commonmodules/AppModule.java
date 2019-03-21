@@ -1,9 +1,7 @@
-package com.mahmoud.mohammed.timesapp.di;
+package com.mahmoud.mohammed.timesapp.di.commonmodules;
 
 import android.app.Application;
 import android.content.Context;
-
-import com.mahmoud.mohammed.timesapp.TimesApplication;
 
 
 import dagger.Module;

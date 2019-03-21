@@ -1,10 +1,13 @@
 package com.mahmoud.mohammed.timesapp.ui.adapters;
 
+import android.content.Context;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.TextView;
 
 import com.mahmoud.mohammed.timesapp.R;
@@ -23,9 +26,11 @@ import de.hdodenhof.circleimageview.CircleImageView;
 public class ArticlesAdapter extends RecyclerView.Adapter<ArticlesAdapter.ArticlesViewHolder> {
     @Inject
     Picasso picasso;
-
+    @Inject
+    Context context;
     private List<Article> articles = new ArrayList<>();
     private ItemClickListener<Article> itemClickListener;
+    private int lastPosition = -1;
 
     @Inject
     public ArticlesAdapter() {
@@ -46,10 +51,23 @@ public class ArticlesAdapter extends RecyclerView.Adapter<ArticlesAdapter.Articl
         holder.tvSource.setText(article.getSource());
         holder.tvDate.setText(article.getPublishedDate());
         picasso.load(article.getMedia().get(0).getMediaMetadata().get(2).getUrl()).into(holder.image);
+        setAnimation(holder.itemView,position);
+    }
+    private void setAnimation(View viewToAnimate, int position)
+    {
+        // If the bound view wasn't previously displayed on screen, it's animated
+        if (position > lastPosition)
+        {
+            Animation animation = AnimationUtils.loadAnimation(context, android.R.anim.slide_in_left);
+            viewToAnimate.startAnimation(animation);
+            lastPosition = position;
+        }
     }
 
-    public void setArticles(List<Article> articles) {
-        this.articles = articles;
+
+    public void updateTimes(List<Article> articles) {
+        this.articles.clear();
+        this.articles.addAll(articles);
         notifyDataSetChanged();
     }
 
@@ -79,12 +97,9 @@ public class ArticlesAdapter extends RecyclerView.Adapter<ArticlesAdapter.Articl
         public ArticlesViewHolder(final View itemView) {
             super(itemView);
             ButterKnife.bind(this, itemView);
-            itemView.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    if (itemClickListener != null) {
-                        itemClickListener.onItemClick(getAdapterPosition(), articles.get(getAdapterPosition()));
-                    }
+            itemView.setOnClickListener(view -> {
+                if (itemClickListener != null) {
+                    itemClickListener.onItemClick(getAdapterPosition(), articles.get(getAdapterPosition()));
                 }
             });
 

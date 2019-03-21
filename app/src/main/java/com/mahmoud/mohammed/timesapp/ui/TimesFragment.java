@@ -1,5 +1,6 @@
 package com.mahmoud.mohammed.timesapp.ui;
 
+import android.app.ProgressDialog;
 import android.arch.lifecycle.ViewModelProviders;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -35,11 +36,14 @@ public class TimesFragment extends BaseFragment implements ItemClickListener<Art
     @BindView(R.id.articles_recycler)
 
     RecyclerView articlesRecyclerView;
+    private ProgressDialog dialog;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         AndroidSupportInjection.inject(this);
         super.onCreate(savedInstanceState);
+        dialog = new ProgressDialog(getActivity());
+
         viewModel = ViewModelProviders.of(getActivity(), viewModelFactory).get(TimesListViewModel.class);
         viewModel.loadTimes();
         viewModel.response().observe(this, this::processResponse);
@@ -78,8 +82,13 @@ public class TimesFragment extends BaseFragment implements ItemClickListener<Art
         }
     }
 
+    private void renderLoadingState() {
+        dialog.show();
+    }
+
     private void renderDataState(List<Article> data) {
-        adapter.setArticles(data);
+        dialog.dismiss();
+        adapter.updateTimes(data);
 
     }
 
