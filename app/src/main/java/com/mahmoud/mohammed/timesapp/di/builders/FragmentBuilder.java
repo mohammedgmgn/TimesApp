@@ -9,10 +9,6 @@ import dagger.android.ContributesAndroidInjector;
 public interface FragmentBuilder {
 
     @ContributesAndroidInjector
-      TimesFragment getTimesFragment();
-/*
-    @ContributesAndroidInjector
-    abstract TimesDetailsFragment getTimesDetailFragment();
-*/
+    TimesFragment getTimesFragment();
 
 }
