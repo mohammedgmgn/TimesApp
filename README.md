@@ -16,17 +16,17 @@
 
 Separating core logic can help to create a clear separation of concerns that makes our code easier to understand so ,
 
-i modularised the app to three types of module
+i modularised the app to three types of layers
 
-1. “data” module.
+1. “data” layer.
 
     These typically contain a repository for accessing data remotely or via disk.
 
-2. “presentation” module
+2. “presentation” layer
    
     These contain the screens, view models,ui rendring , etc for a feature.  
 
-3. “Domain” module
+3. “Domain” layer will include all business logic and interact between Data and Presentation layer by means of interface and interactors. The objective is to make the domain layer independent of anything, so the business logic can be tested without any dependency to external components
 
 
 ## Technical Notes:
