@@ -62,16 +62,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="24dp">
 
-                <ImageView
-                    android:id="@+id/posterimage"
-                    android:layout_width="192dp"
-                    android:layout_height="192dp"
-                    android:layout_alignParentStart="true"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentTop="true"
-                    android:adjustViewBounds="true"
-                    android:scaleType="centerCrop"
-                    android:src="@color/colorAccent"
+
 
                     />
 
@@ -79,30 +70,17 @@
                     android:id="@+id/title1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_toRightOf="@id/posterimage"
                     android:paddingLeft="@dimen/paddingmed"
                     android:paddingTop="@dimen/paddingsmall"
                     android:paddingRight="@dimen/paddingmed"
                     android:paddingBottom="@dimen/paddingsmall"
                     android:textSize="@dimen/textsize" />
 
-                <TextView
-                    android:id="@+id/tagline"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/title1"
-                    android:layout_toRightOf="@id/posterimage"
-                    android:paddingLeft="@dimen/paddingmed"
-                    android:paddingRight="@dimen/paddingmed"
-                    android:paddingBottom="@dimen/paddingsmall"
-                    android:textStyle="italic" />
 
                 <TextView
                     android:id="@+id/date_status"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/tagline"
-                    android:layout_toRightOf="@id/posterimage"
                     android:paddingLeft="@dimen/paddingmed"
                     android:paddingRight="@dimen/paddingmed"
                     android:paddingBottom="@dimen/paddingmed" />
@@ -113,7 +91,6 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/date_status"
-                    android:layout_toRightOf="@id/posterimage"
                     android:paddingLeft="@dimen/paddingmed"
                     android:paddingRight="@dimen/paddingmed"
                     android:paddingBottom="@dimen/paddingsmall" />

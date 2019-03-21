@@ -1,4 +1,3 @@
-/*
 package com.mahmoud.mohammed.timesapp.presentation.common;
 
 import android.support.test.espresso.IdlingResource;
@@ -26,4 +25,3 @@ public class EspressoIdlingResource {
 
 
 
-*/

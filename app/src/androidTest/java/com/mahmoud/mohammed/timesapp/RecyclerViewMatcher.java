@@ -8,6 +8,8 @@ import org.hamcrest.Description;
 import org.hamcrest.Matcher;
 import org.hamcrest.TypeSafeMatcher;
 
+import java.util.Objects;
+
 
 class RecyclerViewMatcher {
    private final int recyclerViewId;
@@ -47,7 +49,7 @@ class RecyclerViewMatcher {
                    RecyclerView recyclerView =
                             view.getRootView().findViewById(recyclerViewId);
                    if (recyclerView != null && recyclerView.getId() == recyclerViewId) {
-                       childView = recyclerView.findViewHolderForAdapterPosition(position).itemView;
+                       childView = Objects.requireNonNull(recyclerView.findViewHolderForAdapterPosition(position)).itemView;
                    } else {
                        return false;
                    }
