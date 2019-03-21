@@ -1,6 +1,7 @@
-package com.mahmoud.mohammed.timesapp.data;
+package com.mahmoud.mohammed.timesapp.domain;
 
 
+import com.mahmoud.mohammed.timesapp.data.TimesRepository;
 import com.mahmoud.mohammed.timesapp.data.models.ArticlesResponse;
 
 

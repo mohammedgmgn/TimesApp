@@ -75,8 +75,6 @@
         android:layout_centerInParent="true"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
-
-
         android:src="@drawable/arrow_right" />
 
 

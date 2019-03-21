@@ -1,11 +1,8 @@
-package com.mahmoud.mohammed.timesapp.ui.common;
+package com.mahmoud.mohammed.timesapp.presentation.common;
 
 import android.content.Context;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
-
-import java.net.HttpURLConnection;
-import java.net.URL;
 
 public class UiUtil {
 

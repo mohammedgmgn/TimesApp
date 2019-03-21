@@ -1,7 +1,6 @@
 package com.mahmoud.mohammed.timesapp.di.builders;
 
-import com.mahmoud.mohammed.timesapp.ui.TimesDetailsFragment;
-import com.mahmoud.mohammed.timesapp.ui.TimesFragment;
+import com.mahmoud.mohammed.timesapp.presentation.TimesFragment;
 
 import dagger.Module;
 import dagger.android.ContributesAndroidInjector;

@@ -1,9 +1,9 @@
-package com.mahmoud.mohammed.timesapp.ui;
+package com.mahmoud.mohammed.timesapp.presentation;
 
 import android.app.Application;
 
 import com.mahmoud.mohammed.timesapp.base.BaseViewModel;
-import com.mahmoud.mohammed.timesapp.data.TimesUseCase;
+import com.mahmoud.mohammed.timesapp.domain.TimesUseCase;
 
 import javax.inject.Inject;
 

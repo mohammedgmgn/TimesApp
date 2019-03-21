@@ -6,8 +6,8 @@ import android.arch.lifecycle.ViewModelProvider;
 import android.support.annotation.NonNull;
 
 
-import com.mahmoud.mohammed.timesapp.data.TimesUseCase;
-import com.mahmoud.mohammed.timesapp.ui.TimesListViewModel;
+import com.mahmoud.mohammed.timesapp.domain.TimesUseCase;
+import com.mahmoud.mohammed.timesapp.presentation.TimesListViewModel;
 
 import javax.inject.Inject;
 

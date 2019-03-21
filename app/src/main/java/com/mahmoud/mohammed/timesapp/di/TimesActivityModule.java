@@ -1,11 +1,11 @@
 package com.mahmoud.mohammed.timesapp.di;
 
 import com.mahmoud.mohammed.timesapp.data.TimesRepository;
-import com.mahmoud.mohammed.timesapp.data.TimesUseCase;
+import com.mahmoud.mohammed.timesapp.domain.TimesUseCase;
 import com.mahmoud.mohammed.timesapp.data.remote.TimesApi;
 import com.mahmoud.mohammed.timesapp.data.remote.TimesDownloader;
 import com.mahmoud.mohammed.timesapp.di.scopes.PerActivity;
-import com.mahmoud.mohammed.timesapp.ui.TimesFragment;
+import com.mahmoud.mohammed.timesapp.presentation.TimesFragment;
 
 import dagger.Module;
 import dagger.Provides;

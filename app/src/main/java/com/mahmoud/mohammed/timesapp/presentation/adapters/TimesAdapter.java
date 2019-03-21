@@ -1,4 +1,4 @@
-package com.mahmoud.mohammed.timesapp.ui.adapters;
+package com.mahmoud.mohammed.timesapp.presentation.adapters;
 
 import android.content.Context;
 import android.support.annotation.NonNull;
@@ -23,7 +23,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import de.hdodenhof.circleimageview.CircleImageView;
 
-public class ArticlesAdapter extends RecyclerView.Adapter<ArticlesAdapter.ArticlesViewHolder> {
+public class TimesAdapter extends RecyclerView.Adapter<TimesAdapter.ArticlesViewHolder> {
     @Inject
     Picasso picasso;
     @Inject
@@ -33,31 +33,26 @@ public class ArticlesAdapter extends RecyclerView.Adapter<ArticlesAdapter.Articl
     private int lastPosition = -1;
 
     @Inject
-    public ArticlesAdapter() {
+    public TimesAdapter() {
 
     }
 
     @NonNull
     @Override
     public ArticlesViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        return new ArticlesViewHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.article_recycler_item, parent, false));
+        return new ArticlesViewHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.article_item_view, parent, false));
     }
 
     @Override
     public void onBindViewHolder(@NonNull ArticlesViewHolder holder, int position) {
         Article article = articles.get(position);
-        holder.tvTitle.setText(article.getTitle());
-        holder.tvCreatedBy.setText(article.getByline());
-        holder.tvSource.setText(article.getSource());
-        holder.tvDate.setText(article.getPublishedDate());
-        picasso.load(article.getMedia().get(0).getMediaMetadata().get(2).getUrl()).into(holder.image);
-        setAnimation(holder.itemView,position);
+        holder.bindViews(article);
+        setAnimation(holder.itemView, position);
     }
-    private void setAnimation(View viewToAnimate, int position)
-    {
+
+    private void setAnimation(View viewToAnimate, int position) {
         // If the bound view wasn't previously displayed on screen, it's animated
-        if (position > lastPosition)
-        {
+        if (position > lastPosition) {
             Animation animation = AnimationUtils.loadAnimation(context, android.R.anim.slide_in_left);
             viewToAnimate.startAnimation(animation);
             lastPosition = position;
@@ -85,14 +80,21 @@ public class ArticlesAdapter extends RecyclerView.Adapter<ArticlesAdapter.Articl
         public TextView tvTitle;
         @BindView(R.id.image)
         public CircleImageView image;
-
         @BindView(R.id.created_by)
         public TextView tvCreatedBy;
         @BindView(R.id.source)
         public TextView tvSource;
-
         @BindView(R.id.date)
         public TextView tvDate;
+
+        void bindViews(Article article) {
+            tvTitle.setText(article.getTitle());
+            tvCreatedBy.setText(article.getByline());
+            tvSource.setText(article.getSource());
+            tvDate.setText(article.getPublishedDate());
+            picasso.load(article.getMedia().get(0).getMediaMetadata().get(0).getUrl()).into(image);
+
+        }
 
         public ArticlesViewHolder(final View itemView) {
             super(itemView);

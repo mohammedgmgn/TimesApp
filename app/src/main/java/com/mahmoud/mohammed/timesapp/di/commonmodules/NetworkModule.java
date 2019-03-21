@@ -4,7 +4,7 @@ import android.content.Context;
 
 import com.mahmoud.mohammed.timesapp.BuildConfig;
 import com.mahmoud.mohammed.timesapp.data.remote.TimesApi;
-import com.mahmoud.mohammed.timesapp.ui.common.UiUtil;
+import com.mahmoud.mohammed.timesapp.presentation.common.UiUtil;
 
 import javax.inject.Singleton;
 

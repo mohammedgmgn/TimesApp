@@ -1,4 +1,4 @@
-package com.mahmoud.mohammed.timesapp.ui;
+package com.mahmoud.mohammed.timesapp.presentation;
 
 import android.app.ProgressDialog;
 import android.arch.lifecycle.ViewModelProviders;
@@ -15,8 +15,8 @@ import com.mahmoud.mohammed.timesapp.base.BaseFragment;
 import com.mahmoud.mohammed.timesapp.data.models.Article;
 import com.mahmoud.mohammed.timesapp.data.models.Response;
 import com.mahmoud.mohammed.timesapp.di.ViewModelFactory;
-import com.mahmoud.mohammed.timesapp.ui.adapters.ArticlesAdapter;
-import com.mahmoud.mohammed.timesapp.ui.adapters.ItemClickListener;
+import com.mahmoud.mohammed.timesapp.presentation.adapters.TimesAdapter;
+import com.mahmoud.mohammed.timesapp.presentation.adapters.ItemClickListener;
 
 import java.util.List;
 
@@ -33,7 +33,7 @@ public class TimesFragment extends BaseFragment implements ItemClickListener<Art
     @Inject
     ViewModelFactory viewModelFactory;
     @Inject
-    ArticlesAdapter adapter;
+    TimesAdapter adapter;
     @BindView(R.id.articles_recycler)
 
     RecyclerView articlesRecyclerView;
@@ -44,7 +44,7 @@ public class TimesFragment extends BaseFragment implements ItemClickListener<Art
         AndroidSupportInjection.inject(this);
         super.onCreate(savedInstanceState);
         dialog = new ProgressDialog(getActivity());
-
+        dialog.setTitle("Loading");
         viewModel = ViewModelProviders.of(getActivity(), viewModelFactory).get(TimesListViewModel.class);
         viewModel.loadTimes();
         viewModel.response().observe(this, this::processResponse);
@@ -100,6 +100,6 @@ public class TimesFragment extends BaseFragment implements ItemClickListener<Art
 
     @Override
     public void onItemClick(int position, Article model) {
-
+           navigateToDetailsScreen(model);
     }
 }

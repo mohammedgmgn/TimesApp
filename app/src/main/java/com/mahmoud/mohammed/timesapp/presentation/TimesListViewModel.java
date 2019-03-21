@@ -1,13 +1,11 @@
-package com.mahmoud.mohammed.timesapp.ui;
+package com.mahmoud.mohammed.timesapp.presentation;
 
 import android.app.Application;
 import android.arch.lifecycle.MutableLiveData;
 
-import com.mahmoud.mohammed.timesapp.data.TimesUseCase;
+import com.mahmoud.mohammed.timesapp.domain.TimesUseCase;
 import com.mahmoud.mohammed.timesapp.data.models.Response;
 import com.mahmoud.mohammed.timesapp.base.BaseViewModel;
-
-import javax.inject.Inject;
 
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.schedulers.Schedulers;

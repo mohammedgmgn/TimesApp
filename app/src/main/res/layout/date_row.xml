@@ -8,7 +8,7 @@
         android:layout_width="15dp"
         android:layout_height="15dp"
         android:layout_margin="4dp"
-        android:src="@drawable/calendar" />
+        android:src="@drawable/calendar_ic" />
 
     <TextView
         android:id="@+id/date"
