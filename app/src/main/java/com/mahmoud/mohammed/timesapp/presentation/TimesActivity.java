@@ -1,8 +1,8 @@
 package com.mahmoud.mohammed.timesapp.presentation;
 
+import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 
 import com.mahmoud.mohammed.timesapp.R;
 

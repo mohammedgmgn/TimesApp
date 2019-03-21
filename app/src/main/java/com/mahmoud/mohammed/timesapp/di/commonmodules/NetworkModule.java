@@ -43,8 +43,8 @@ public class NetworkModule {
     @Provides
     OkHttpClient providesOkHttpClient(Context context) {
 
-        long cacheSize =(long) (5 * 1024 * 1024);
-        Cache cache= new Cache(context.getCacheDir(), cacheSize);
+        long cacheSize = (long) (5 * 1024 * 1024);
+        Cache cache = new Cache(context.getCacheDir(), cacheSize);
         return new OkHttpClient.Builder().cache(cache)
                 .addInterceptor(chain -> {
                     Request request = chain.request();

@@ -45,7 +45,6 @@
     </android.support.design.widget.AppBarLayout>
 
 
-
     <android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
@@ -66,13 +65,13 @@
                 <ImageView
                     android:id="@+id/posterimage"
                     android:layout_width="192dp"
-                    android:src="@color/colorAccent"
                     android:layout_height="192dp"
-                    android:layout_alignParentLeft="true"
                     android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
                     android:layout_alignParentTop="true"
                     android:adjustViewBounds="true"
                     android:scaleType="centerCrop"
+                    android:src="@color/colorAccent"
 
                     />
 
@@ -81,10 +80,10 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_toRightOf="@id/posterimage"
-                    android:paddingBottom="@dimen/paddingsmall"
                     android:paddingLeft="@dimen/paddingmed"
-                    android:paddingRight="@dimen/paddingmed"
                     android:paddingTop="@dimen/paddingsmall"
+                    android:paddingRight="@dimen/paddingmed"
+                    android:paddingBottom="@dimen/paddingsmall"
                     android:textSize="@dimen/textsize" />
 
                 <TextView
@@ -93,9 +92,9 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@id/title1"
                     android:layout_toRightOf="@id/posterimage"
-                    android:paddingBottom="@dimen/paddingsmall"
                     android:paddingLeft="@dimen/paddingmed"
                     android:paddingRight="@dimen/paddingmed"
+                    android:paddingBottom="@dimen/paddingsmall"
                     android:textStyle="italic" />
 
                 <TextView
@@ -104,9 +103,9 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@id/tagline"
                     android:layout_toRightOf="@id/posterimage"
-                    android:paddingBottom="@dimen/paddingmed"
                     android:paddingLeft="@dimen/paddingmed"
-                    android:paddingRight="@dimen/paddingmed" />
+                    android:paddingRight="@dimen/paddingmed"
+                    android:paddingBottom="@dimen/paddingmed" />
 
 
                 <TextView
@@ -115,13 +114,11 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@id/date_status"
                     android:layout_toRightOf="@id/posterimage"
-                    android:paddingBottom="@dimen/paddingsmall"
                     android:paddingLeft="@dimen/paddingmed"
-                    android:paddingRight="@dimen/paddingmed" />
+                    android:paddingRight="@dimen/paddingmed"
+                    android:paddingBottom="@dimen/paddingsmall" />
 
             </RelativeLayout>
-
-
 
 
         </LinearLayout>

@@ -87,15 +87,6 @@ public class TimesAdapter extends RecyclerView.Adapter<TimesAdapter.ArticlesView
         @BindView(R.id.date)
         public TextView tvDate;
 
-        void bindViews(Article article) {
-            tvTitle.setText(article.getTitle());
-            tvCreatedBy.setText(article.getByline());
-            tvSource.setText(article.getSource());
-            tvDate.setText(article.getPublishedDate());
-            picasso.load(article.getMedia().get(0).getMediaMetadata().get(0).getUrl()).into(image);
-
-        }
-
         public ArticlesViewHolder(final View itemView) {
             super(itemView);
             ButterKnife.bind(this, itemView);
@@ -104,6 +95,15 @@ public class TimesAdapter extends RecyclerView.Adapter<TimesAdapter.ArticlesView
                     itemClickListener.onItemClick(getAdapterPosition(), articles.get(getAdapterPosition()));
                 }
             });
+
+        }
+
+        void bindViews(Article article) {
+            tvTitle.setText(article.getTitle());
+            tvCreatedBy.setText(article.getByline());
+            tvSource.setText(article.getSource());
+            tvDate.setText(article.getPublishedDate());
+            picasso.load(article.getMedia().get(0).getMediaMetadata().get(0).getUrl()).into(image);
 
         }
     }

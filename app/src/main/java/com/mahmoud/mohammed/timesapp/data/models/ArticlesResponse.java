@@ -6,15 +6,14 @@ import java.util.List;
 
 public class ArticlesResponse {
 
-    @SerializedName("num_results")
-     int numResults;
     @SerializedName("status")
     public String status;
     @SerializedName("copyright")
     public String copyright;
-
     @SerializedName("results")
     public List<Article> articles;
+    @SerializedName("num_results")
+    int numResults;
 
     public int getNumResults() {
         return numResults;

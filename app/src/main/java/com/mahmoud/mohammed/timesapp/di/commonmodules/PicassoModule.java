@@ -12,7 +12,6 @@ import dagger.Provides;
 import okhttp3.OkHttpClient;
 
 
-
 @Module
 public class PicassoModule {
 

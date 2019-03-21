@@ -4,8 +4,6 @@ import com.mahmoud.mohammed.timesapp.BuildConfig;
 import com.mahmoud.mohammed.timesapp.data.TimesRepository;
 import com.mahmoud.mohammed.timesapp.data.models.ArticlesResponse;
 
-import java.util.List;
-
 import javax.inject.Inject;
 
 import io.reactivex.Observable;
@@ -19,7 +17,7 @@ public class TimesDownloader implements TimesRepository {
     }
 
     @Override
-    public Observable<ArticlesResponse>getTimes() {
+    public Observable<ArticlesResponse> getTimes() {
         return timesApi.getArticles(BuildConfig.API_KEY);
     }
 }

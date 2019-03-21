@@ -15,7 +15,7 @@ public class DetailActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail);
         if (savedInstanceState == null) {
-            timesDetailsFragment=new TimesDetailsFragment();
+            timesDetailsFragment = new TimesDetailsFragment();
             getSupportFragmentManager()
                     .beginTransaction()
                     .replace(R.id.container,
