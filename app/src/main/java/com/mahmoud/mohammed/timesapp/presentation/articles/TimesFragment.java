@@ -1,4 +1,4 @@
-package com.mahmoud.mohammed.timesapp.presentation;
+package com.mahmoud.mohammed.timesapp.presentation.articles;
 
 import android.app.ProgressDialog;
 import android.arch.lifecycle.ViewModelProviders;
@@ -15,6 +15,7 @@ import com.mahmoud.mohammed.timesapp.base.BaseFragment;
 import com.mahmoud.mohammed.timesapp.data.models.Article;
 import com.mahmoud.mohammed.timesapp.data.models.Response;
 import com.mahmoud.mohammed.timesapp.di.ViewModelFactory;
+import com.mahmoud.mohammed.timesapp.presentation.TimesListViewModel;
 import com.mahmoud.mohammed.timesapp.presentation.adapters.ItemClickListener;
 import com.mahmoud.mohammed.timesapp.presentation.adapters.TimesAdapter;
 

@@ -1,4 +1,4 @@
-package com.mahmoud.mohammed.timesapp.presentation;
+package com.mahmoud.mohammed.timesapp.presentation.detail;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;

@@ -5,7 +5,7 @@ import com.mahmoud.mohammed.timesapp.data.remote.TimesApi;
 import com.mahmoud.mohammed.timesapp.data.remote.TimesDownloader;
 import com.mahmoud.mohammed.timesapp.di.scopes.PerActivity;
 import com.mahmoud.mohammed.timesapp.domain.TimesUseCase;
-import com.mahmoud.mohammed.timesapp.presentation.TimesFragment;
+import com.mahmoud.mohammed.timesapp.presentation.articles.TimesFragment;
 
 import dagger.Module;
 import dagger.Provides;

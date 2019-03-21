@@ -14,10 +14,10 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".presentation.DetailActivity"
+            android:name=".presentation.detail.DetailActivity"
             android:label="@string/title_activity_detail"
             android:theme="@style/AppTheme.NoActionBar"></activity>
-        <activity android:name=".presentation.TimesActivity">
+        <activity android:name=".presentation.articles.TimesActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

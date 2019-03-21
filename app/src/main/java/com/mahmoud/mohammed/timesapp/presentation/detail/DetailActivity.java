@@ -1,9 +1,10 @@
-package com.mahmoud.mohammed.timesapp.presentation;
+package com.mahmoud.mohammed.timesapp.presentation.detail;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
 import com.mahmoud.mohammed.timesapp.R;
+import com.mahmoud.mohammed.timesapp.presentation.detail.TimesDetailsFragment;
 
 
 public class DetailActivity extends AppCompatActivity {

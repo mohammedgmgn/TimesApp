@@ -22,11 +22,11 @@ public class TimesListViewModel extends BaseViewModel {
 
     }
 
-    MutableLiveData<Response> response() {
+    public MutableLiveData<Response> response() {
         return response;
     }
 
-    void loadTimes() {
+    public void loadTimes() {
         addDisposable(
                 timesUseCase.getArticleTimes()
                         .subscribeOn(Schedulers.io())
