@@ -13,12 +13,10 @@ import io.reactivex.schedulers.Schedulers;
 public class TimesListViewModel extends BaseViewModel {
     private final MutableLiveData<Response> response = new MutableLiveData<>();
     TimesUseCase timesUseCase;
-    Application application;
 
     public TimesListViewModel(Application application, TimesUseCase timesUseCase) {
         super(application);
         this.timesUseCase = timesUseCase;
-        this.application = application;
 
     }
 

@@ -7,11 +7,16 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.mahmoud.mohammed.timesapp.R;
+import com.mahmoud.mohammed.timesapp.data.models.Article;
 
 public class TimesDetailsFragment extends Fragment {
+    public static String ARTICALE_KEY="ArticaleKey";
+    Article article;
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        assert getArguments() != null;
+        article = getArguments().getParcelable(ARTICALE_KEY);
 
     }
 
