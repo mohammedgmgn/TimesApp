@@ -3,7 +3,7 @@
 
 
 <p align="center">
-<img src="last.gif" width="350" height="650"/>
+<img src="last.gif" width="280" height="580"/>
 </p>
 
 
@@ -37,3 +37,34 @@ i modularised the app to three types of layers
 ## Technical Notes:
 1. Cacheing .
 7. Follow most of `Google Design Guidelines`.
+1- ViewModels and LiveData 
+
+
+### Used libraries: ###
+- [RxJava2](https://github.com/ReactiveX/RxJava)
+- [RxAndroid](https://github.com/ReactiveX/RxAndroid)
+- [Retrofit2](https://github.com/square/retrofit)
+- [Android architecture components](https://developer.android.com/topic/libraries/architecture/index.html)
+- [Picasso](https://github.com/square/picasso)
+- [OkHttp](https://github.com/square/okhttp)
+- [butterknife](http://jakewharton.github.io/butterknife/)
+
+### License: ###
+~~~~
+Copyright 2019 Mohammed Mahmoud 
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+   http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+~~~~
+
+
+
