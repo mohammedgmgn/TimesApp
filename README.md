@@ -48,7 +48,7 @@ it will be generated at `app\build\reports\coverage\debug\index.html`
 
 
 <p align="center">
-<img src="Success.png" width="500" height="200"/>
+<img src="Success.PNG" width="500" height="200"/>
 </p>
 
 
