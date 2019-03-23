@@ -8,6 +8,9 @@
     <dimen name="paddingmed">16dp</dimen>
     <dimen name="textsize">18sp</dimen>
     <dimen name="largesize">64dp</dimen>
+    <dimen name="nav_header_vertical_spacing">8dp</dimen>
+    <dimen name="nav_header_height">176dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
 
 
 </resources>
