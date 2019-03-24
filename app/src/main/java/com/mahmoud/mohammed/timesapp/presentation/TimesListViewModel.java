@@ -6,6 +6,7 @@ import android.arch.lifecycle.MutableLiveData;
 import com.mahmoud.mohammed.timesapp.base.BaseViewModel;
 import com.mahmoud.mohammed.timesapp.data.models.Response;
 import com.mahmoud.mohammed.timesapp.domain.TimesUseCase;
+import com.mahmoud.mohammed.timesapp.presentation.common.EspressoIdlingResource;
 
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.schedulers.Schedulers;
@@ -25,6 +26,8 @@ public class TimesListViewModel extends BaseViewModel {
     }
 
     public void loadTimes() {
+        EspressoIdlingResource.increment();
+
         addDisposable(
                 timesUseCase.getArticleTimes()
                         .subscribeOn(Schedulers.io())
@@ -32,7 +35,14 @@ public class TimesListViewModel extends BaseViewModel {
                         .doOnSubscribe(__ -> response.setValue(Response.loading()))
                         .subscribe(
                                 articlesResponse -> response.setValue(Response.success(articlesResponse)),
-                                throwable -> response.setValue(Response.error(throwable))
-                        ));
+                                throwable -> {
+                                    EspressoIdlingResource.decrement();
+                                    response.setValue(Response.error(throwable));
+                                }
+
+
+                        )
+
+        );
     }
 }

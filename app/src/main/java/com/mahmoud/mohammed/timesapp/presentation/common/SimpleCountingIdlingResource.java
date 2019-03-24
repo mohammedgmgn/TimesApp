@@ -1,10 +1,10 @@
-/*
 package com.mahmoud.mohammed.timesapp.presentation.common;
 
 import android.support.test.espresso.IdlingResource;
 
 import java.util.concurrent.atomic.AtomicInteger;
 
+import kotlin.jvm.Volatile;
 
 public class SimpleCountingIdlingResource implements IdlingResource {
 
@@ -32,22 +32,11 @@ public class SimpleCountingIdlingResource implements IdlingResource {
     }
 
 
-    */
-/**
-     * Increments the count of in-flight transactions to the resource being monitored.
-     *//*
 
     public void increment() {
         counter.getAndIncrement();
     }
 
-    */
-/**
-     * Decrements the count of in-flight transactions to the resource being monitored.
-     * If this operation results in the counter falling below 0 - an exception is raised.
-     *
-     * @throws IllegalStateException if the counter is below 0.
-     *//*
 
     public void decrement() {
         int counterVal = counter.decrementAndGet();
@@ -59,4 +48,3 @@ public class SimpleCountingIdlingResource implements IdlingResource {
             throw new IllegalArgumentException("Counter has been corrupted!");
     }
 }
-*/

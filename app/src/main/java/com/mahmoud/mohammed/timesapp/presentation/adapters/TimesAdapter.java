@@ -112,4 +112,3 @@ public class TimesAdapter extends RecyclerView.Adapter<TimesAdapter.ArticlesView
 }
 
 
-
